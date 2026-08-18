@@ -18,6 +18,7 @@ export class SocialNetwork {
     }
 
     getFriends(user: string): Set<string> {
+        // If the user does not exist, return a fresh empty Set as a safe fallback.
         return this._friends.get(user) ?? new Set();
     }
 
