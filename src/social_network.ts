@@ -12,6 +12,8 @@ export class SocialNetwork {
     addFriendship(userA: string, userB: string): void {
         this.addUser(userA);
         this.addUser(userB);
+        // Store the friendship in only one direction: userA follows/knows userB.
+        // If you want a mutual friendship, add userA to userB's set as well.
         this._friends.get(userA)!.add(userB);
     }
 
